@@ -50,8 +50,7 @@ failure = "0.1.7"
 tempfile = "3"
 
 [features]
-#default = ["gpu", "pairing"]
-default = ["gpu"]
+default = ["gpu", "pairing"]
 cpu-profile = ["gperftools"]
 heap-profile = ["gperftools/heap"]
 simd = ["storage-proofs-core/simd"]
@@ -64,22 +63,22 @@ gpu = [
     "filecoin-hashers/gpu",
     "fr32/gpu",
 ]
-#pairing = [
-#    "storage-proofs-core/pairing",
-#    "storage-proofs-porep/pairing",
-#    "storage-proofs-post/pairing",
-#    "bellperson/pairing",
-#    "filecoin-hashers/pairing",
-#    "fr32/pairing",
-#]
-#blst = [
-#    "storage-proofs-core/blst",
-#    "storage-proofs-porep/blst",
-#    "storage-proofs-post/blst",
-#    "bellperson/blst",
-#    "filecoin-hashers/blst",
-#    "fr32/blst",
-#]
+pairing = [
+    "storage-proofs-core/pairing",
+    "storage-proofs-porep/pairing",
+    "storage-proofs-post/pairing",
+    "bellperson/pairing",
+    "filecoin-hashers/pairing",
+    "fr32/pairing",
+]
+blst = [
+    "storage-proofs-core/blst",
+    "storage-proofs-porep/blst",
+    "storage-proofs-post/blst",
+    "bellperson/blst",
+    "filecoin-hashers/blst",
+    "fr32/blst",
+]
 
 [[bench]]
 name = "preprocessing"

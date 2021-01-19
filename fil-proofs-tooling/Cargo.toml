@@ -54,8 +54,7 @@ structopt = "0.3.12"
 humansize = "1.1.0"
 
 [features]
-#default = ["gpu", "measurements", "pairing"]
-default = ["gpu", "measurements"]
+default = ["gpu", "measurements", "pairing"]
 gpu = [
     "storage-proofs-core/gpu",
     "storage-proofs-porep/gpu",
@@ -66,24 +65,22 @@ gpu = [
 ]
 measurements = ["storage-proofs-core/measurements"]
 profile = ["storage-proofs-core/profile", "measurements"]
-#pairing = [
-#    "storage-proofs-core/pairing",
-#    "storage-proofs-porep/pairing",
-#    "storage-proofs-post/pairing",
-#    "filecoin-proofs/pairing",
-#    "bellperson/pairing",
-#    "filecoin-hashers/pairing",
-#]
-#blst = [
-#    "storage-proofs-core/blst",
-#    "storage-proofs-porep/blst",
-#    "storage-proofs-post/blst",
-#    "filecoin-proofs/blst",
-#    "bellperson/blst",
-#    "filecoin-hashers/blst",
-#]
-pairing = []
-blst = []
+pairing = [
+    "storage-proofs-core/pairing",
+    "storage-proofs-porep/pairing",
+    "storage-proofs-post/pairing",
+    "filecoin-proofs/pairing",
+    "bellperson/pairing",
+    "filecoin-hashers/pairing",
+]
+blst = [
+    "storage-proofs-core/blst",
+    "storage-proofs-porep/blst",
+    "storage-proofs-post/blst",
+    "filecoin-proofs/blst",
+    "bellperson/blst",
+    "filecoin-hashers/blst",
+]
 
 [target.'cfg(target_arch = "x86_64")'.dependencies]
 raw-cpuid = "8.1.2"
